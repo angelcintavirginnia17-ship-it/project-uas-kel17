@@ -1,11 +1,190 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Baby & Mom Shop - Seperti Shopee untuk Bayi dan Ibu</title>
+    <style>
+        {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        
+        header {
+            background-color: #ff69b4; 
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        header h1 {
+            font-size: 24px;
+        }
+        
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+        
+        nav ul li {
+            margin-left: 20px;
+        }
+        
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+        
+        main {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+        
+        .hero {
+            text-align: center;
+            background-color: #e0f7fa;
+            padding: 40px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+        
+        .hero h2 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+        
+        .hero p {
+            font-size: 18px;
+        }
+        
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        .product {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .product img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+        
+        .product h3 {
+            margin: 10px 0;
+            font-size: 18px;
+        }
+        
+        .product p {
+            color: #888;
+        }
+        
+        .product .price {
+            font-weight: bold;
+            color: #ff69b4;
+            margin: 10px 0;
+        }
+        
+        .product button {
+            background-color: #ff69b4;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        .product button:hover {
+            background-color: #ff1493;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+    </style>
 </head>
 <body>
+    <header>
+        <h1>Baby & Mom Shop</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Beranda</a></li>
+                <li><a href="#">Produk</a></li>
+                <li><a href="#">Keranjang</a></li>
+                <li><a href="#">Akun</a></li>
+            </ul>
+        </nav>
+    </header>
     
+    <main>
+        <section class="hero">
+            <h2>Selamat Datang di Baby & Mom Shop</h2>
+            <p>Temukan produk terbaik untuk bayi dan ibu Anda, seperti Shopee tapi lebih spesifik untuk kebutuhan keluarga kecil!</p>
+        </section>
+        
+        <section class="products">
+            <div class="product">
+                <img src="https://source.unsplash.com/250x200/?baby,toys" alt="Mainan Bayi">
+                <h3>Mainan Bayi Edukatif</h3>
+                <p>Mainan aman dan menyenangkan untuk perkembangan bayi.</p>
+                <p class="price">Rp 150.000</p>
+                <button>Beli Sekarang</button>
+            </div>
+            <div class="product">
+                <img src="https://source.unsplash.com/250x200/?mom,clothes" alt="Pakaian Ibu">
+                <h3>Pakaian Nyaman untuk Ibu</h3>
+                <p>Baju ibu hamil dan menyusui yang nyaman dan stylish.</p>
+                <p class="price">Rp 200.000</p>
+                <button>Beli Sekarang</button>
+            </div>
+            <div class="product">
+                <img src="https://source.unsplash.com/250x200/?baby,bottle" alt="Botol Susu">
+                <h3>Botol Susu Anti Kolik</h3>
+                <p>Botol susu berkualitas tinggi untuk bayi Anda.</p>
+                <p class="price">Rp 100.000</p>
+                <button>Beli Sekarang</button>
+            </div>
+            <div class="product">
+                <img src="https://source.unsplash.com/250x200/?mom,skincare" alt="Skincare Ibu">
+                <h3>Skincare untuk Ibu Hamil</h3>
+                <p>Produk perawatan kulit aman selama kehamilan.</p>
+                <p class="price">Rp 250.000</p>
+                <button>Beli Sekarang</button>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2023 Baby & Mom Shop. Semua hak dilindungi.</p>
+    </footer>
 </body>
 </html>

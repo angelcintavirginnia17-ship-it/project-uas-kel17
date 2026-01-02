@@ -1,0 +1,128 @@
+
+     :root {
+            --primary-pink: #ffdae0;
+            --dark-pink: #d14d72;
+            --soft-blue: #a2d2ff;
+            --white: #ffffff;
+            --text-dark: #4a3a3d;
+        }
+
+        body {
+            font-family: 'Quicksand', sans-serif;
+            background-color: #fffafb;
+            color: var(--text-dark);
+            margin: 0;
+        }
+          header {
+            background-color: #ff69b4; 
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        header h1 {
+            font-size: 24px;
+        }
+        
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+        
+        nav ul li {
+            margin-left: 20px;
+        }
+        
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .container { max-width: 1100px; margin: auto; padding: 60px 20px; }
+        /* TESTIMONI GRID */
+        .testi-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            margin-bottom: 80px;
+        }
+
+        .testi-card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 30px;
+            box-shadow: 0 10px 30px rgba(209, 77, 114, 0.08);
+            position: relative;
+            transition: 0.3s;
+        }
+
+        .testi-card:hover { transform: translateY(-10px); }
+
+        .quote-icon {
+            position: absolute;
+            top: 20px; right: 30px;
+            font-size: 2rem; color: var(--primary-pink); opacity: 0.4;
+        }
+
+        .stars { color: #ffcc00; margin-bottom: 15px; }
+
+        .testi-text {
+            font-family: 'Poppins', sans-serif;
+            font-style: italic; color: #666;
+            line-height: 1.6; margin-bottom: 20px;
+        }
+
+        .user-info { display: flex; align-items: center; }
+        .user-info img { width: 55px; height: 55px; border-radius: 50%; border: 3px solid var(--primary-pink); object-fit: cover; }
+        .user-detail { margin-left: 15px; }
+        .user-detail h4 { margin: 0; color: var(--dark-pink); font-weight: 700; }
+        .user-detail span { font-size: 0.8rem; color: #aaa; }
+
+        /* FORM TESTIMONI */
+        .form-section {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 30px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.05);
+            max-width: 600px;
+            margin: auto;
+        }
+
+        .form-section h3 { text-align: center; color: var(--dark-pink); margin-bottom: 30px; }
+
+        .form-group { margin-bottom: 20px; }
+        .form-group label { display: block; margin-bottom: 8px; font-weight: 600; }
+        .form-group input, .form-group textarea {
+            width: 100%; padding: 12px 15px;
+            border: 2px solid #f0f0f0; border-radius: 15px;
+            font-family: inherit; outline: none; transition: 0.3s;
+            box-sizing: border-box;
+        }
+
+        .form-group input:focus, .form-group textarea:focus { border-color: var(--primary-pink); }
+
+        .btn-submit {
+            background: var(--dark-pink); color: white;
+            border: none; padding: 15px 30px; width: 100%;
+            border-radius: 15px; font-weight: 700; cursor: pointer;
+            transition: 0.3s; font-size: 1rem;
+        }
+
+        .btn-submit:hover { background: #b03a5b; box-shadow: 0 5px 15px rgba(209, 77, 114, 0.3); }
+
+        .star-rating {
+            display: flex; gap: 5px; flex-direction: row-reverse; justify-content: flex-end;
+            margin-bottom: 20px;
+        }
+        .star-rating input { display: none; }
+        .star-rating label { font-size: 1.5rem; color: #ddd; cursor: pointer; transition: 0.2s; }
+        .star-rating input:checked ~ label,
+        .star-rating label:hover,
+        .star-rating label:hover ~ label { color: #ffcc00; }

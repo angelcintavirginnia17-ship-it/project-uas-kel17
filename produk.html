@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produk</title>
+    <link rel="stylesheet" href="css/style.css"> <title>Produk - Baby & Mom Shop</title>
+</head>
+<body>
+     <header>
+        <h1>Baby & Mother Needs Store</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="produk.html">Produk</a></li>
+                <li><a href="akun.html">Akun</a></li>
+                <li><a href="Kontak.html">Kontak</a></li>
+                <li><a href="Blog.html">Blog</a></li>
+                <li><a href="tentang kami.html">Tentang Kami</a></li>
+                <li><a href="FAQ.html">FAQ</a></li>
+                <li><a href="legal.html">Legal</a></li>
+                <li><a href="testimoni.html">Testimoni</a></li>
+                <li style="float:right;"><a href="#" onclick="bukaKeranjang()">🛒 Keranjang (<span id="jumlah-item">0</span>)</a></li>
+            </ul>
+        </nav>
+    </header>
+      <section class="hero">
+            <h2>Selamat Datang di Baby & Mom Shop</h2>
+            <p>Temukan produk terbaik untuk bayi dan ibu Anda, seperti Shopee tapi lebih spesifik untuk kebutuhan keluarga kecil!</p>
+        </section>
+        
+       <section class="products">
+            <div class="product">
+                <img src="image/mainan bayi.jpg" alt="Mainan Bayi">
+                <h3>Mainan Bayi Edukatif</h3>
+                <p>Mainan aman dan menyenangkan untuk perkembangan bayi.</p>
+                <p class="price">Rp 150.000</p>
+                <button>Beli Sekarang</button>
+            </div>
+            <div class="product">
+                <img src="image/baju.webp" alt="Pakaian Ibu">
+                <h3>Pakaian Nyaman untuk Ibu</h3>
+                <p>Baju ibu hamil dan menyusui yang nyaman dan stylish.</p>
+                <p class="price">Rp 200.000</p>
+                <button>Beli Sekarang</button>
+            </div>
+            <div class="product">
+                <img src="image/botol.jpg" alt="Botol Susu">
+                <h3>Botol Susu Anti Kolik</h3>
+                <p>Botol susu berkualitas tinggi untuk bayi Anda.</p>
+                <p class="price">Rp 100.000</p>
+                <button>Beli Sekarang</button>
+            </div>
+            <div class="product">
+                <img src="image/skincare.jpg" alt="Skincare Ibu">
+                <h3>Skincare untuk Ibu Hamil</h3>
+                <p>Produk perawatan kulit aman selama kehamilan.</p>
+                <p class="price">Rp 250.000</p>
+                <button>Beli Sekarang</button>
+            </div>
+               <div class="product">
+                <img src="image/makanan.jpg" alt="Makan Bayi & Balita">
+                <h3>Makan Bayi & Balita </h3>
+                <p>Makanan Balita Terbaik untuk Tumbuh Kembang Optimal! 
+                    Camilan Sehat & Praktis: Solusi Anti-GTM untuk Si Kecil!
+                </p>
+                <p class="price">Rp 50.000</p>
+                <button>Beli Sekarang</button>
+            </div>
+            <div class="product">
+                <img src="image/susu.jpg" alt="Susu Bayi & Balita">
+                <h3>Susu Bayi & Balita</h3>
+                <p>Susu formula berkualitas tinggi yang diformulasikan khusus untuk mendukung tumbuh kembang optimal bayi.</p>
+                <p class="price">Rp 50.000 - 350.000</p>
+                <button>Beli Sekarang</button>
+            </div>
+            <div class="product">
+                <img src="image/susu hamil.jpg" alt="Susu & Vitamin Ibu Hamil">
+                <h3>Susu Ibu Hamil </h3>
+                <p>Dukung Kehamilan Sehat, Optimalkan Tumbuh Kembang Janin Anda!
+                </p>
+                <p class="price">Rp 50.000 - 200.000</p>
+                <button>Beli Sekarang</button>
+            </div>
+            <div class="product">
+                <img src="image/perlengkapan.jpeg" alt="Pelengkapan Persalinan">
+                <h3>Pelengkapan Persalinan</h3>
+                <p>Paket perlengkapan persalinan lengkap yang dirancang untuk memenuhi kebutuhan ibu selama proses melahirkan hingga masa nifas.</p>
+                <p class="price">Rp 400.000</p>
+                <button>Beli Sekarang</button>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2023 Baby & Mom Shop. Semua hak dilindungi.</p>
+    </footer>
+    <!-- Modal Keranjang -->
+    <div id="modal-keranjang" style="display:none; position:fixed; top:0; right:0; width:350px; height:100%; background: linear-gradient(to bottom, #fff, #f9f9f9); border-left:3px solid #ff69b4; padding:20px; z-index:100; box-shadow: -5px 0 15px rgba(0,0,0,0.2); font-family: Arial, sans-serif;">
+        <h3 style="color: #ff69b4; text-align: center; margin-bottom: 10px;">🛒 Keranjang Belanja</h3>
+        <hr style="border: none; height: 2px; background: #ff69b4;">
+        <div id="isi-keranjang" style="max-height: 60%; overflow-y: auto; margin-bottom: 20px;">
+            <p style="color: #888; text-align: center;">Keranjang kosong.</p>
+        </div>
+        <div style="border-top: 2px solid #ddd; padding-top: 15px; text-align: center;">
+            <p style="font-size: 18px; font-weight: bold; color: #333;"><strong>Total: </strong> <span id="total-harga" style="color: #ff69b4;">Rp 0</span></p>
+            <button onclick="tutupKeranjang()" style="background:#888; color:white; border:none; padding:10px 15px; margin:5px; cursor:pointer; border-radius:5px; font-size:14px;">Tutup</button>
+            <a href="keranjang.html"><button style="background:#ff69b4; color:white; border:none; padding:10px 15px; margin:5px; cursor:pointer; border-radius:5px; font-size:14px;">Lihat Keranjang</button></a>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>

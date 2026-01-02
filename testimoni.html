@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testimoni Bunda - Baby & Mom Store</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/testimoni.css"> <title>testimoni - Baby & Mom Shop</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  
+</head>
+<body> 
+    <header>
+    <nav>
+         <h1>Baby & Mother Needs Store</h1>
+            <ul>
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="produk.html">Produk</a></li>
+                <li><a href="akun.html">Akun</a></li>
+                <li><a href="Kontak.html">Kontak</a></li>
+                <li><a href="Blog.html">Blog</a></li>
+                <li><a href="tentang kami.html">tentang kami</a></li>
+                <li><a href="FAQ.html">FAQ</a></li>
+                <li><a href="legal.html">Legal</a></li>
+                <li><a href="testimoni.html">testimoni</a></li>
+                 <li style="float:right;"><a href="#" onclick="bukaKeranjang()">🛒 Keranjang (<span id="jumlah-item">0</span>)</a></li>
+            </ul>
+        </nav>
+  </header>
+
+    <section class="container">
+        <div class="section-header" data-aos="fade-up">
+            <h2>Apa Kata Para Bunda?</h2>
+            <div class="underline"></div>
+            <p style="margin-top: 15px; color: #888;">Cerita nyata dari Bunda hebat yang telah mempercayai kami.</p>
+        </div>
+
+        <div class="testi-grid" id="testiGrid">
+            <div class="testi-card" data-aos="fade-up">
+                <i class="fas fa-quote-right quote-icon"></i>
+                <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                <p class="testi-text">"Bahannya beneran lembut banget, pas banget buat kulit sensitif bayi saya. Pengirimannya juga rapi pake box."</p>
+                <div class="user-info">
+                    <img src="https://i.pravatar.cc/150?u=b1" alt="Bunda">
+                    <div class="user-detail">
+                        <h4>Bunda Fitri</h4>
+                        <span>Mama dari Rayyan (6 bln)</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testi-card" data-aos="fade-up" data-aos-delay="100">
+                <i class="fas fa-quote-right quote-icon"></i>
+                <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                <p class="testi-text">"Awalnya coba-coba, tapi keterusan belanja disini karena respon adminnya ramah banget dan barangnya original."</p>
+                <div class="user-info">
+                    <img src="https://i.pravatar.cc/150?u=b2" alt="Bunda">
+                    <div class="user-detail">
+                        <h4>Bunda Sarah</h4>
+                        <span>Mama dari Aira (1 thn)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr style="border: 0.5px solid #eee; margin-bottom: 60px;">
+
+        <div class="form-section" data-aos="zoom-in">
+            <h3>Bunda, Berbagi Cerita Yuk!</h3>
+            <form id="formTesti">
+                <div class="form-group">
+                    <label>Nama Bunda</label>
+                    <input type="text" id="nama" placeholder="Contoh: Bunda Rina" required>
+                </div>
+                <div class="form-group">
+                    <label>Bunda dari si Kecil Siapa?</label>
+                    <input type="text" id="anak" placeholder="Contoh: Mama dari Al (4 bln)" required>
+                </div>
+                <div class="form-group">
+                    <label>Rating Bunda</label>
+                    <div class="star-rating">
+                        <input type="radio" name="star" id="star5" value="5"><label for="star5" class="fas fa-star"></label>
+                        <input type="radio" name="star" id="star4" value="4"><label for="star4" class="fas fa-star"></label>
+                        <input type="radio" name="star" id="star3" value="3"><label for="star3" class="fas fa-star"></label>
+                        <input type="radio" name="star" id="star2" value="2"><label for="star2" class="fas fa-star"></label>
+                        <input type="radio" name="star" id="star1" value="1"><label for="star1" class="fas fa-star"></label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Cerita Bunda</label>
+                    <textarea id="pesan" rows="4" placeholder="Tuliskan pengalaman Bunda belanja disini..." required></textarea>
+                </div>
+                <button type="submit" class="btn-submit">Kirim Testimoni <i class="fas fa-paper-plane"></i></button>
+            </form>
+        </div>
+    </section>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1000, once: true });
+
+        const form = document.getElementById('formTesti');
+        const testiGrid = document.getElementById('testiGrid');
+
+        form.onsubmit = function(e) {
+            e.preventDefault();
+
+            const nama = document.getElementById('nama').value;
+            const anak = document.getElementById('anak').value;
+            const pesan = document.getElementById('pesan').value;
+            const rating = document.querySelector('input[name="star"]:checked')?.value || 5;
+
+            const card = document.createElement('div');
+            card.className = 'testi-card';
+            card.innerHTML = `
+                <i class="fas fa-quote-right quote-icon"></i>
+                <div class="stars">${'<i class="fas fa-star"></i>'.repeat(rating)}</div>
+                <p class="testi-text">"${pesan}"</p>
+                <div class="user-info">
+                    <img src="https://i.pravatar.cc/150?u=${Math.random()}" alt="Bunda">
+                    <div class="user-detail">
+                        <h4>${nama}</h4>
+                        <span>${anak}</span>
+                    </div>
+                </div>
+            `;
+
+            testiGrid.prepend(card);
+
+            form.reset();
+            alert("Terima kasih sudah berbagi cerita, Bunda! Testimoni Bunda sangat berarti bagi kami.");
+        };
+    </script>
+</body>
+</html>

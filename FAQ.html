@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - Baby & Mom Store</title>
+    <link rel="stylesheet" href="css/FAQ.css"> <title>FAQ - baby and mom Shop</title>
+
+</head>
+<body>
+    <header>
+         <h1>Baby & Mother Needs Store</h1>
+         <nav>
+            <ul>
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="produk.html">Produk</a></li>
+                <li><a href="akun.html">Akun</a></li>
+                <li><a href="Kontak.html">Kontak</a></li>
+                <li><a href="Blog.html">Blog</a></li>
+                <li><a href="tentang kami.html">tentang kami</a></li>
+                <li><a href="FAQ.html">FAQ</a></li>
+                <li><a href="legal.html">Legal</a></li>
+                <li><a href="testimoni.html">testimoni</a></li>
+                 <li style="float:right;"><a href="#" onclick="bukaKeranjang()">🛒 Keranjang (<span id="jumlah-item">0</span>)</a></li>
+
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="header-faq">
+            <h1>Pertanyaan Sering Diajukan</h1>
+            <p>Punya pertanyaan? Kami siap membantu Bunda!</p>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">Apakah produk Baby & Mom aman untuk bayi baru lahir?</button>
+            <div class="faq-answer">
+                <p>Tentu, Bunda! Semua produk perawatan kulit dan pakaian kami telah melalui uji klinis, bebas paraben, dan menggunakan bahan organik yang sangat lembut untuk kulit bayi yang sensitif.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">Berapa lama waktu pengiriman pesanan saya?</button>
+            <div class="faq-answer">
+                <p>Untuk wilayah Jabodetabek, pengiriman biasanya memakan waktu 1-2 hari kerja. Luar kota berkisar antara 3-5 hari kerja tergantung ekspedisi yang Bunda pilih.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">Bagaimana jika produk yang diterima rusak atau tidak sesuai?</button>
+            <div class="faq-answer">
+                <p>Bunda tidak perlu khawatir. Kami menyediakan garansi retur 2x24 jam setelah barang diterima. Pastikan Bunda memvideokan proses unboxing sebagai bukti ya!</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">Apakah bisa melakukan pembayaran via COD?</button>
+            <div class="faq-answer">
+                <p>Ya, kami mendukung layanan Bayar di Tempat (COD) untuk seluruh wilayah di Indonesia melalui kurir mitra kami.</p>
+            </div>
+        </div>
+
+        <div class="contact-support">
+            <p>Belum menemukan jawaban? Hubungi kami via <a href="#">WhatsApp Customer Service</a></p>
+        </div>
+    </div>
+
+    <script>
+        // Script untuk membuat accordion berfungsi
+        const faqItems = document.querySelectorAll('.faq-item');
+
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            
+            question.addEventListener('click', () => {
+                // Menutup item lain yang mungkin sedang terbuka (optional)
+                faqItems.forEach(otherItem => {
+                    if (otherItem !== item) {
+                        otherItem.classList.remove('active');
+                        otherItem.querySelector('.faq-answer').style.maxHeight = null;
+                    }
+                });
+
+                // Toggle class active
+                item.classList.toggle('active');
+                const answer = item.querySelector('.faq-answer');
+                
+                if (item.classList.contains('active')) {
+                    answer.style.maxHeight = answer.scrollHeight + "px";
+                } else {
+                    answer.style.maxHeight = null;
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

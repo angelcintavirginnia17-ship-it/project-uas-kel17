@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keranjang - Baby & Mother Needs Store</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Baby & Mother Needs Store</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="produk.html">Produk</a></li>
+                <li><a href="akun.html">Akun</a></li>
+                <li><a href="Kontak.html">Kontak</a></li>
+                <li><a href="Blog.html">Blog</a></li>
+                <li><a href="tentang kami.html">Tentang Kami</a></li>
+                <li><a href="FAQ.html">FAQ</a></li>
+                <li><a href="legal.html">Legal</a></li>
+                <li><a href="testimoni.html">Testimoni</a></li>
+                 <li style="float:right;"><a href="#" onclick="bukaKeranjang()">🛒 Keranjang (<span id="jumlah-item">0</span>)</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="keranjang" style="max-width: 800px; margin: 20px auto; padding: 20px; background: #fff; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
+            <h2 style="color: #ff69b4; text-align: center;">Keranjang Belanja Anda</h2>
+            <div id="isi-keranjang-lengkap" style="margin: 20px 0;">
+                <p style="text-align: center; color: #888;">Keranjang kosong.</p>
+            </div>
+            <div style="text-align: center; border-top: 2px solid #ddd; padding-top: 20px;">
+                <p style="font-size: 20px; font-weight: bold;"><strong>Total: </strong><span id="total-harga" style="color: #ff69b4;">Rp 0</span></p>
+                <button onclick="checkout()" style="background:#ff69b4; color:white; border:none; padding:15px 30px; cursor:pointer; border-radius:5px; font-size:16px; margin-top:10px;">Checkout</button>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 Baby & Mom Shop. Semua hak dilindungi.</p>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informasi Legal - Inspirasi Bunda</title>
+    <link rel="stylesheet" href="css/legal.css"> <title>Legal - Baby & Mom Shop</title>
+    <link rel="stylesheet" href="css/style.css"> <title>Legal - Baby & Mom Shop</title>
+</head>
+<body>
+
+    <header class="legal-header">
+         <h1>Baby & Mother Needs Store</h1>
+         <nav>
+            <ul>
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="produk.html">Produk</a></li>
+                <li><a href="akun.html">Akun</a></li>
+                <li><a href="Kontak.html">Kontak</a></li>
+                <li><a href="Blog.html">Blog</a></li>
+                <li><a href="tentang kami.html">tentang kami</a></li>
+                <li><a href="FAQ.html">FAQ</a></li>
+                <li><a href="legal.html">Legal</a></li>
+                <li><a href="testimoni.html">testimoni</a></li>
+                 <li style="float:right;"><a href="#" onclick="bukaKeranjang()">🛒 Keranjang (<span id="jumlah-item">0</span>)</a></li>
+
+            </ul>
+        </nav>
+</header>
+
+    <div class="container">
+        <a href="index.html" class="back-home"><i class="fas fa-arrow-left"></i> Kembali ke Beranda</a>
+        
+        <div class="tabs">
+            <button class="tab-btn active" onclick="openTab(event, 'terms')">Syarat & Ketentuan</button>
+            <button class="tab-btn" onclick="openTab(event, 'privacy')">Kebijakan Privasi</button>
+            <button class="tab-btn" onclick="openTab(event, 'refund')">Kebijakan Retur</button>
+        </div>
+
+        <div id="terms" class="tab-content active">
+            <h2>Syarat & Ketentuan</h2>
+            <span class="last-update">Terakhir diperbarui: 26 Desember 2025</span>
+            <div class="legal-text">
+                <h3>1. Penggunaan Layanan</h3>
+                <p>Dengan mengakses situs Inspirasi Bunda, Anda setuju untuk mematuhi peraturan penggunaan layanan kami. Layanan ini diperuntukkan bagi penggunaan pribadi dan non-komersial.</p>
+                
+                <h3>2. Akurasi Informasi</h3>
+                <p>Kami berusaha memberikan deskripsi produk seakurat mungkin. Namun, perbedaan warna mungkin terjadi karena efek pencahayaan atau resolusi layar Bunda.</p>
+                
+                <h3>3. Pembatalan Pesanan</h3>
+                <p>Inspirasi Bunda berhak membatalkan pesanan jika terjadi kesalahan harga yang nyata atau stok produk tidak tersedia secara mendadak.</p>
+            </div>
+        </div>
+
+        <div id="privacy" class="tab-content">
+            <h2>Kebijakan Privasi</h2>
+            <span class="last-update">Terakhir diperbarui: 26 Desember 2025</span>
+            <div class="legal-text">
+                <h3>Informasi yang Kami Kumpulkan</h3>
+                <p>Kami mengumpulkan nama, alamat pengiriman, dan nomor telepon untuk keperluan pengiriman produk. Kami menjamin data Bunda tidak akan dijual kepada pihak ketiga.</p>
+                
+                <h3>Keamanan Data</h3>
+                <p>Semua data transaksi dienkripsi dengan standar keamanan tinggi untuk memastikan privasi Bunda dan si Kecil tetap terjaga.</p>
+            </div>
+        </div>
+
+        <div id="refund" class="tab-content">
+            <h2>Kebijakan Pengembalian (Retur)</h2>
+            <span class="last-update">Terakhir diperbarui: 26 Desember 2025</span>
+            <div class="legal-text">
+                <h3>Syarat Retur Produk</h3>
+                <p>Bunda dapat mengajukan retur jika produk yang diterima dalam keadaan rusak atau salah kirim, dengan syarat:</p>
+                <ul>
+                    <li>Menyertakan video unboxing tanpa jeda.</li>
+                    <li>Produk belum dicuci dan label harga masih terpasang.</li>
+                    <li>Pengajuan dilakukan maksimal 2x24 jam setelah barang diterima.</li>
+                </ul>
+                <p>Biaya pengiriman untuk barang rusak akan sepenuhnya kami tanggung.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2025 Inspirasi Bunda Store. Semua hak dilindungi undang-undang.
+    </footer>
+
+    <script>
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+                tabcontent[i].classList.remove("active");
+            }
+            tablinks = document.getElementsByClassName("tab-btn");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(tabName).style.display = "block";
+            document.getElementById(tabName).classList.add("active");
+            evt.currentTarget.className += " active";
+        }
+    </script>
+</body>
+</html>

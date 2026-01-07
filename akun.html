@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Akun</title>
-    <link rel="stylesheet" href="css/style.css"> <title>Akun - Baby & Mom Shop</title>
+    <title>Akun - Baby & Mom Shop</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/akun.css"
 </head>
 <body>
-     <header>
+    <header>
         <h1>Baby & Mother Needs Store</h1>
         <nav>
             <ul>
@@ -21,59 +22,62 @@
                 <li><a href="FAQ.html">FAQ</a></li>
                 <li><a href="legal.html">Legal</a></li>
                 <li><a href="testimoni.html">testimoni</a></li>
-
             </ul>
         </nav>
     </header>
+
     <section class="hero">
-            <h2>Profil Saya</h2>
-            <p>Kelola informasi akun dan pantau pesanan kebutuhan buah hati Anda.</p>
+        <h2>Profil Saya</h2>
+        <p>Kelola informasi akun dan pantau pesanan kebutuhan buah hati Anda.</p>
+    </section>
+
+    <div class="account-container">
+        <section class="profile-card">
+            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="User Profile">
+            <h3>Bunda Pertiwi</h3>
+            <p>bunda.pertiwi@email.com</p>
+            <p>+62 812 3456 7890</p>
+            <br>
+            <button class="btn-edit">Edit Profil</button> 
+            <button class="btn-logout">Keluar</button>
         </section>
 
-        <div class="account-container">
-            <section class="profile-card">
-                <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="User Profile">
-                <h3>Bunda Pertiwi</h3>
-                <p>bunda.pertiwi@email.com</p>
-                <p>+62 812 3456 7890</p>
-                <br>
-                <button style="width: 100%;">Edit Profil</button> 
-                <button style="width: 100%; margin-top: 10px; background-color: #ff69b4;">Keluar</button>
-            </section>
-
-            <section class="order-history">
-                <h3>Riwayat Pesanan Terakhir</h3>
-                <div class="order-item">
-                    <div>
-                        <strong>#ORD-12345</strong><br>
-                        <small>15 Desember 2023</small>
-                    </div>
-                    <div>
-                        <span class="status-pill">Dikirim</span>
-                        <p class="price">Rp 150.000</p>
-                    </div>
+        <section class="order-history">
+            <h3>Riwayat Pesanan Terakhir</h3>
+            <div class="order-item">
+                <div>
+                    <strong>#ORD-12345</strong><br>
+                    <small>15 Desember 2023</small>
                 </div>
-                <div class="order-item">
-                    <div>
-                        <strong>#ORD-12340</strong><br>
-                        <small>01 Desember 2023</small>
-                    </div>
-                    <div>
-                        <span class="status-pill" style="background-color: #4CAF50;">Selesai</span>
-                        <p class="price">Rp 350.000</p>
-                    </div>
+                <div>
+                    <span class="status-pill">Dikirim</span>
+                    <p class="price">Rp 150.000</p>
                 </div>
-                <div class="order-item">
-                    <div>
-                        <strong>#ORD-12338</strong><br>
-                        <small>20 November 2023</small>
-                    </div>
-                    <div>
-                        <span class="status-pill" style="background-color: #4CAF50;">Selesai</span>
-                        <p class="price">Rp 200.000</p>
-                    </div>
+            </div>
+            <div class="order-item">
+                <div>
+                    <strong>#ORD-12340</strong><br>
+                    <small>01 Desember 2023</small>
                 </div>
-            </section>
-    
+                <div>
+                    <span class="status-pill status-done">Selesai</span>
+                    <p class="price">Rp 350.000</p>
+                </div>
+            </div>
+            <div class="order-item">
+                <div>
+                    <strong>#ORD-12338</strong><br>
+                    <small>20 November 2023</small>
+                </div>
+                <div>
+                    <span class="status-pill status-done">Selesai</span>
+                    <p class="price">Rp 200.000</p>
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; 2026 Baby & Mom Shop. Semua hak dilindungi.</p>
+    </footer>
 </body>
 </html>

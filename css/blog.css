@@ -1,0 +1,77 @@
+/* --- CSS Dasar Akun --- */
+.btn-full {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-logout {
+    margin-top: 10px;
+    background-color: #ff69b4;
+    color: white;
+}
+
+.status-success {
+    background-color: #4CAF50;
+}
+
+/* --- CSS Dasar Blog --- */
+.blog-article {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    margin-top: 40px;
+    padding: 20px;
+    text-align: left;
+}
+
+.meta-post {
+    color: #666;
+    font-size: 0.9em;
+}
+
+.divider {
+    border: 0.5px solid #eee;
+    margin: 20px 0;
+}
+
+.blog-content {
+    line-height: 1.6;
+}
+
+.newsletter-box {
+    max-width: 500px;
+    margin: 20px auto;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.newsletter-box .form-group {
+    margin-bottom: 15px;
+}
+
+.newsletter-box input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    box-sizing: border-box;
+}
+
+.btn-subscribe {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.status-message {
+    margin-top: 15px;
+    font-weight: bold;
+    color: #2e7d32;
+    display: none;
+}

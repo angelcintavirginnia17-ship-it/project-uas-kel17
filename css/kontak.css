@@ -1,0 +1,72 @@
+
+.cart-nav {
+    float: right;
+}
+
+
+.contact-section {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    margin-top: 40px;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+
+.form-container {
+    text-align: left;
+    max-width: 500px;
+    margin: 20px auto;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; 
+}
+
+.form-group small {
+    color: #777;
+    font-size: 0.8rem;
+}
+
+
+.btn-submit {
+    background-color: #ff69b4;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btn-submit:hover {
+    background-color: #ff1493;
+}
+
+
+.success-message {
+    margin-top: 15px;
+    font-weight: bold;
+    color: #2e7d32;
+    display: none;
+    padding: 10px;
+    background-color: #e8f5e9;
+    border-radius: 5px;
+}

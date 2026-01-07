@@ -2,12 +2,13 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kontak</title>
-    <link rel="stylesheet" href="css/style.css"> <title>Kontak - Baby & Mom Shop</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontak - Baby & Mom Shop</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/kontak.css"
 </head>
 <body>
-     <header>
+    <header>
         <h1>Baby & Mother Needs Store</h1>
         <nav>
             <ul>
@@ -20,54 +21,56 @@
                 <li><a href="FAQ.html">FAQ</a></li>
                 <li><a href="legal.html">Legal</a></li>
                 <li><a href="testimoni.html">testimoni</a></li>
-                 <li style="float:right;"><a href="#" onclick="bukaKeranjang()">🛒 Keranjang (<span id="jumlah-item">0</span>)</a></li>
-
+                <li class="cart-nav"><a href="#" onclick="bukaKeranjang()">🛒 Keranjang (<span id="jumlah-item">0</span>)</a></li>
             </ul>
         </nav>
     </header>
+
     <main>
-       <section class="hero" style="background-color: #fff; border: 1px solid #ddd; margin-top: 40px;">
-    <h2>Daftar Member Baru</h2>
-    <p>Dapatkan promo khusus ibu dan bayi setiap minggunya!</p>
-    
-    <form id="registrationForm" style="text-align: left; max-width: 500px; margin: 20px auto;">
-        <div style="margin-bottom: 15px;">
-            <label for="nama">Nama Lengkap:</label>
-            <input type="text" id="nama" name="nama" required minlength="3" placeholder="Contoh: Siti Aminah" style="width: 100%; padding: 8px; margin-top: 5px;">
-        </div>
+        <section class="hero contact-section">
+            <h2>Daftar Member Baru</h2>
+            <p>Dapatkan promo khusus ibu dan bayi setiap minggunya!</p>
+            
+            <form id="registrationForm" class="form-container">
+                <div class="form-group">
+                    <label for="nama">Nama Lengkap:</label>
+                    <input type="text" id="nama" name="nama" required minlength="3" placeholder="Contoh: Siti Aminah">
+                </div>
 
-        <div style="margin-bottom: 15px;">
-            <label for="email">Alamat Email:</label>
-            <input type="email" id="email" name="email" required placeholder="email@contoh.com" style="width: 100%; padding: 8px; margin-top: 5px;">
-        </div>
+                <div class="form-group">
+                    <label for="email">Alamat Email:</label>
+                    <input type="email" id="email" name="email" required placeholder="email@contoh.com">
+                </div>
 
-        <div style="margin-bottom: 15px;">
-            <label for="telepon">Nomor Telepon:</label>
-            <input type="tel" id="telepon" name="telepon" required pattern="[0-9]{10,13}" placeholder="0812xxxxxxxx" style="width: 100%; padding: 8px; margin-top: 5px;">
-            <small>Minimal 10-13 digit angka.</small>
-        </div>
+                <div class="form-group">
+                    <label for="telepon">Nomor Telepon:</label>
+                    <input type="tel" id="telepon" name="telepon" required pattern="[0-9]{10,13}" placeholder="0812xxxxxxxx">
+                    <small>Minimal 10-13 digit angka.</small>
+                </div>
 
-        <button type="submit" style="background-color: #ff69b4; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; width: 100%;">Daftar Sekarang</button>
-    </form>
-    <div id="message" style="margin-top: 15px; font-weight: bold; color: green; display: none;">Pendaftaran Berhasil! Terima kasih telah bergabung.</div>
-</section>
-
-<script>
-    document.getElementById('registrationForm').addEventListener('submit', function(event) {
-        event.preventDefault(); 
-
-        const nama = document.getElementById('nama').value;
-        const email = document.getElementById('email').value;
-        const telp = document.getElementById('telepon').value;
-
-        if(nama && email && telp) {
-            document.getElementById('message').style.display = 'block';
-            this.reset(); 
-        } else {
-            alert('Mohon lengkapi semua data dengan benar.');
-        }
-    });
-</script>
+                <button type="submit" class="btn-submit">Daftar Sekarang</button>
+            </form>
+            <div id="message" class="success-message">Pendaftaran Berhasil! Terima kasih telah bergabung.</div>
+        </section>
     </main>
+
+    <script>
+        document.getElementById('registrationForm').addEventListener('submit', function(event) {
+            event.preventDefault(); 
+            const nama = document.getElementById('nama').value;
+            const email = document.getElementById('email').value;
+            const telp = document.getElementById('telepon').value;
+
+            if(nama && email && telp) {
+                document.getElementById('message').style.display = 'block';
+                this.reset(); 
+            } else {
+                alert('Mohon lengkapi semua data dengan benar.');
+            }
+        });
+    </script>
+    <footer>
+        <p>&copy; 2026 Baby & Mom Shop. Semua hak dilindungi.</p>
+    </footer>
 </body>
 </html>

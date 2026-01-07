@@ -1,0 +1,64 @@
+
+.cart-page-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 30px;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.cart-title {
+    color: #ff69b4;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 24px;
+}
+
+.cart-detailed-list {
+    margin: 20px 0;
+    min-height: 100px;
+}
+
+.empty-cart-msg {
+    text-align: center;
+    color: #888;
+    font-style: italic;
+}
+
+
+.cart-summary {
+    text-align: center;
+    border-top: 2px solid #f0f0f0;
+    padding-top: 25px;
+    margin-top: 20px;
+}
+
+.total-price-text {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+#total-harga-lengkap {
+    color: #ff69b4;
+}
+
+
+.btn-checkout {
+    background: #ff69b4;
+    color: white;
+    border: none;
+    padding: 15px 50px;
+    cursor: pointer;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(255, 105, 180, 0.3);
+}
+
+.btn-checkout:hover {
+    background: #ff1493;
+    transform: scale(1.05);
+}

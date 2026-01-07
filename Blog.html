@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog - Catatan Harian Ibu & Bayi</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/blog.css">
 </head>
 <body>
     <header>
@@ -20,68 +21,50 @@
                 <li><a href="FAQ.html">FAQ</a></li>
                 <li><a href="legal.html">Legal</a></li>
                 <li><a href="testimoni.html">testimoni</a></li>
-                 <li style="float:right;"><a href="#" onclick="bukaKeranjang()">🛒 Keranjang (<span id="jumlah-item">0</span>)</a></li>
-
+                <li class="cart-nav"><a href="#" onclick="bukaKeranjang()">Keranjang (<span id="jumlah-item">0</span>)</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <article class="hero" style="background-color: #fff; border: 1px solid #ddd; margin-top: 40px; padding: 20px; text-align: left;">
+        <article class="hero blog-article">
             <h2>Tips Memilih Pakaian Nyaman untuk Bayi Baru Lahir</h2>
-            <p style="color: #666; font-size: 0.9em;">Diposting pada: 24 Mei 2024 | Oleh: Admin</p>
+            <p class="meta-post">Diposting pada: 24 Mei 2024 | Oleh: Admin</p>
             
-            <hr style="border: 0.5px solid #eee; margin: 20px 0;">
+            <hr class="divider">
 
-            <div class="blog-content" style="line-height: 1.6;">
-                <p>Memilih pakaian untuk bayi baru lahir bukan hanya soal gaya, tetapi yang terpenting adalah kenyamanan dan keamanan kulit sensitif mereka. Bahan katun organik seringkali menjadi pilihan terbaik karena menyerap keringat dengan baik.</p>
-                
+            <div class="blog-content">
+                <p>Memilih pakaian untuk bayi baru lahir bukan hanya soal gaya, tetapi kenyamanan kulit sensitif mereka.</p>
                 <h3>Hal yang perlu diperhatikan:</h3>
                 <ul>
                     <li>Pilih bahan yang lembut (100% Cotton).</li>
                     <li>Hindari kancing yang terlalu banyak di bagian belakang.</li>
-                    <li>Pastikan ukuran tidak terlalu ketat agar sirkulasi udara terjaga.</li>
                 </ul>
             </div>
 
-            <hr style="border: 0.5px solid #eee; margin: 20px 0;">
-
-            <section style="max-width: 500px; margin: 20px auto; background-color: #f9f9f9; padding: 20px; border-radius: 8px;">
+            <section class="newsletter-box">
                 <h3>Langganan Artikel Terbaru</h3>
                 <p>Dapatkan tips kesehatan bayi langsung ke email Anda!</p>
                 
-                <form id="newsletterForm" style="text-align: left;">
-                    <div style="margin-bottom: 15px;">
+                <form id="newsletterForm">
+                    <div class="form-group">
                         <label for="nama">Nama Anda:</label>
-                        <input type="text" id="nama" name="nama" required minlength="3" placeholder="Nama lengkap" style="width: 100%; padding: 8px; margin-top: 5px; box-sizing: border-box;">
+                        <input type="text" id="nama" name="nama" required minlength="3" placeholder="Nama lengkap">
                     </div>
-
-                    <div style="margin-bottom: 15px;">
+                    <div class="form-group">
                         <label for="email">Alamat Email:</label>
-                        <input type="email" id="email" name="email" required placeholder="email@blog.com" style="width: 100%; padding: 8px; margin-top: 5px; box-sizing: border-box;">
+                        <input type="email" id="email" name="email" required placeholder="email@blog.com">
                     </div>
-
-                    <button type="submit" style="background-color: #4CAF50; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; width: 100%;">Langganan Sekarang</button>
+                    <button type="submit" class="btn-subscribe">Langganan Sekarang</button>
                 </form>
-                <div id="statusMessage" style="margin-top: 15px; font-weight: bold; color: #2e7d32; display: none;">Terima kasih! Anda akan menerima update artikel mingguan.</div>
+                <div id="statusMessage" class="status-message">Terima kasih! Anda akan menerima update mingguan.</div>
             </section>
         </article>
     </main>
 
-    <script>
-        document.getElementById('newsletterForm').addEventListener('submit', function(event) {
-            event.preventDefault(); 
-
-            const nama = document.getElementById('nama').value;
-            const email = document.getElementById('email').value;
-
-            if(nama && email) {
-                document.getElementById('statusMessage').style.display = 'block';
-                this.reset(); 
-            } else {
-                alert('Mohon masukkan nama dan email yang valid.');
-            }
-        });
-    </script>
+    <footer>
+        <p>&copy; 2026 Baby & Mom Shop. Semua hak dilindungi.</p>
+    </footer>
+    <script src="js/script.js"></script>
 </body>
 </html>

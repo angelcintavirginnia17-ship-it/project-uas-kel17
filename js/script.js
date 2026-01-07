@@ -120,3 +120,4 @@ document.addEventListener('DOMContentLoaded', function() {
     // Update tampilan keranjang lengkap jika di halaman keranjang
     updateTampilanKeranjangLengkap();
 });
+
